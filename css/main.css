@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Merriweather', serif;
+    letter-spacing: .01rem;
+    line-height: 1.75rem;
+    margin: 0;
+    background-color: #f8f6f6;
+}
+
+.main {
+    margin: 20px;
+}
+
+.header {
+    position: relative;
+}
+
+#wish-icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.heading {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.add {
+    padding: 10px 80px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
