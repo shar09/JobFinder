@@ -7,7 +7,7 @@
 
 html, body {
     height: 100%;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: .01rem;
     line-height: 1.75rem;
     margin: 0;
@@ -76,13 +76,16 @@ html, body {
 .modal {
     background-color: white;
     width: 350px;
-    height: 300px;
+    height: 350px;
     margin-top: 40px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-direction: column;
     border-radius: 5px;
+}
+
+.modal > h2 {
+    align-self: center;
+    margin: 40px 0;
 }
 
 .job-form {
@@ -90,4 +93,36 @@ html, body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+}
+
+#search-icon {
+    position: absolute;
+    top: 17px;
+    left: 270px;
+    color: #b9b8b8;
+}
+
+#job-icon {
+    position: absolute;
+    top: 97px;
+    left: 270px;
+    color: #b9b8b8;
+}
+
+.job-form > input, .job-form > button {
+    margin-bottom: 30px;
+    width: 70%;
+    padding: 15px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.job-form > input {
+    border: 1px solid #cccccc;
+    border-radius: 5px;    
+}
+
+.job-form > button {
+    border-radius: 10px;
 }
