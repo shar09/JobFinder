@@ -20,6 +20,8 @@ html, body {
     border: 2px solid black;
 }
 
+/* Header */
+
 .header {
     position: relative;
     margin: 20px;
@@ -43,14 +45,65 @@ html, body {
 .num-jobs {
     margin-left: 100px;
     font-weight: 300;
+    font-size: 15px;
 }
 
 .add-btn {
-    padding: 10px 80px;
+    padding: 6px 80px;
     border-radius: 5px;
     margin: 10px;
     cursor: pointer;
     width: 95%;
+    font-size: 18px;
+}
+
+/* Job Container */
+
+.card {
+    border: 1px solid #aaaaaa;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    position: relative;
+}
+
+.company-logo {
+    font-size: 24px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.card> span {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.card> h4 {
+    margin-left: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+#delete-card {
+   position: absolute;
+   top: 10px;
+   left: 275px;
+   font-size: 16px;
+   padding: 8px;
+   border: 1px solid #cccccc;
+   border-radius: 50%;
+   opacity: 0;
+}
+
+#delete-card:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 /* Modal */
@@ -125,4 +178,5 @@ html, body {
 
 .job-form > button {
     border-radius: 10px;
+    cursor: pointer;
 }
