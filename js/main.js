@@ -5,10 +5,12 @@ const modalBg = document.querySelector('.modal-bg');
 const continueBtn = document.querySelector('.continue-btn');
 const jobContainer = document.querySelector('.job-container');
 let form = document.querySelector('.job-form');
+let deleteBtn = document.querySelector('.job-container');
 
 // Event Listeners
 addBtn.addEventListener('click', jobModal);
 continueBtn.addEventListener('click', addJob);
+deleteBtn.addEventListener('click', deleteCard);
 
 // Functions
 function jobModal() {
@@ -33,15 +35,28 @@ function addJob(event) {
    // Company logo
    const companyLogo = document.createElement('i');
    companyLogo.classList.add('fab', `fa-${form.elements[0].value.toLowerCase()}`, 'company-logo');
+   // Deelte button
+   const deleteButton = document.createElement('i');
+   deleteButton.classList.add('far', 'fa-trash-alt', 'delete-card');
    // Appending newly created elements
    card.appendChild(companyLogo);
    card.appendChild(companyName);
    card.appendChild(jobTitle);
+   card.appendChild(deleteButton);
    jobContainer.appendChild(card);
    // Closing modal
    modalBg.classList.remove('bg-active');
    // Clearing form
    form.elements[0].value = '';
-   form.elements[0].value = '';
+   form.elements[1].value = '';
+}
+
+function deleteCard(e) {
+   let item = e.target;
+   console.log(e.target);
+   if(item.classList[0] === 'far') {
+      let removeCard = item.parentElement;
+      removeCard.remove();
+   }
 }
 }
